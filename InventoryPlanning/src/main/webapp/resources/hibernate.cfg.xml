@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+    <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="connection.username">TESTUSER</property>
+    <property name="connection.password">root</property>
+    <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <property name="show_sql">true</property>
+    <mapping class="com.ip.model.Demands"/>
+    <mapping class="com.ip.model.CostsAndTime" />
+    <mapping class="com.ip.model.HealthyStock"/>
+    <mapping class="com.ip.model.FaultyStock"/>
+    <mapping class="com.ip.model.Nmit"/>
+    <mapping class="com.ip.model.Locations"/>
+    <mapping class="com.ip.model.Planner_settings"/>
+    <mapping class="com.ip.model.ToursFrance"/>
+    <mapping class="com.ip.model.WasMoving"/>
+    <mapping class="com.ip.model.Items"/>
+    <mapping class="com.ip.model.OUTPUT_RESULTS"/>
+    <mapping class="com.ip.model.OUTPUT_NMIT"/>
+    <mapping class="com.ip.model.OUTPUT_MOVES"/>
+    <mapping class="com.ip.model.OUTPUT_COSTS"/>
+    <mapping class="com.ip.model.OUTPUT_FSTOCK"/>
+    <mapping class="com.ip.model.OUTPUT_HSTOCK"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
