@@ -1,24 +1,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
     <title>Augment an Admin Panel Category Flat Bootstrap Responsive Web Template | Tables :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
     <!-- Bootstrap Core CSS -->
-    <link href="/resources/css/bootstrap.min2.css" rel='stylesheet' type='text/css' />
+    <link href="/resources/css/bootstrap.min2.css" rel='stylesheet' type='text/css'/>
     <!-- Custom CSS -->
-    <link href="/resources/css/style2.css" rel='stylesheet' type='text/css' />
+    <link href="/resources/css/style2.css" rel='stylesheet' type='text/css'/>
     <!-- Graph CSS -->
     <link href="/resources/css/font-awesome.css" rel="stylesheet">
     <!-- jQuery -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet'
+          type='text/css'>
     <!-- lined-icons -->
-    <link rel="stylesheet" href="/resources/css/icon-font.min.css" type='text/css' />
+    <link rel="stylesheet" href="/resources/css/icon-font.min.css" type='text/css'/>
     <!-- /js -->
     <script src="/resources/js/jquery-1.10.2.min.js"></script>
     <!-- //js-->
@@ -34,20 +40,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="top_menu">
                     <div class="main-search">
                         <form>
-                            <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text"/>
+                            <input type="text" value="Search" onFocus="this.value = '';"
+                                   onBlur="if (this.value == '') {this.value = 'Search';}" class="text"/>
                             <input type="submit" value=""/>
                         </form>
-                        <div class="close"><img src="/resources/pictures/cross.png" /></div>
+                        <div class="close"><img src="/resources/pictures/cross.png"/></div>
                     </div>
                     <%--<div class="srch"><button></button></div>--%>
                     <script type="text/javascript">
                         $('.main-search').hide();
-                        $('button').click(function (){
-                                    $('.main-search').show();
-                                    $('.main-search text').focus();
-                                }
+                        $('button').click(function () {
+                                $('.main-search').show();
+                                $('.main-search text').focus();
+                            }
                         );
-                        $('.close').click(function(){
+                        $('.close').click(function () {
                             $('.main-search').hide();
                         });
                     </script>
@@ -106,7 +113,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <td>${healthystock.ITEMCODE}</td>
                                         <td>${healthystock.STOCK}</td>
                                     </tr>
-
                                 </c:forEach>
 
                                 </tbody>
@@ -163,44 +169,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--/sidebar-menu-->
 <div class="sidebar-menu">
     <header class="logo">
-        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="home"> <span id="logo"> <img align="center" alt="Brand" src="resources/pictures/logo.png"></span>
+        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="home"> <span id="logo"> <img
+            align="center" alt="Brand" src="resources/pictures/logo.png"></span>
         <!--<img id="logo" src="" alt="Logo"/>-->
     </a>
     </header>
     <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
     <div class="menu">
-        <ul id="menu" >
-            <li id="menu-academico" ><a href=""><i class="fa fa-table"></i> <span> Data</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-                <ul id="menu-academico-sub" >
-                    <li id="menu-academico" ><a href="input"><i class="fa fa-download"></i>&nbsp;Inputs</a>
-                        <ul id="menu-mensagens-sub"  >
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="costsandtime">COSTSANDTIME</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="demands">DEMANDS</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="faultystock">FAULTYSTOCK</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="healthystock">HEALTHYSTOCK</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="items">ITEMS</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="locations">LOCATIONS</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="nmit">NMIT</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="planner_settings">PLANNER_SETTINGS</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="toursfrance">TOURSFRANCE</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="wasmoving">WASMOVING</a></li>
+        <ul id="menu">
+            <li id="menu-academico"><a href=""><i class="fa fa-table"></i> <span> Data</span> <span
+                    class="fa fa-angle-right" style="float: right"></span></a>
+                <ul id="menu-academico-sub">
+                    <li id="menu-academico"><a href="input"><i class="fa fa-download"></i>&nbsp;Inputs</a>
+                        <ul id="menu-mensagens-sub">
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="costsandtime">COSTSANDTIME</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="demands">DEMANDS</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="faultystock">FAULTYSTOCK</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="healthystock">HEALTHYSTOCK</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="items">ITEMS</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="locations">LOCATIONS</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="nmit">NMIT</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="planner_settings">PLANNER_SETTINGS</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="toursfrance">TOURSFRANCE</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="wasmoving">WASMOVING</a></li>
                         </ul>
                     </li>
 
                     <li><a href="output"><i class="fa fa-upload"></i>&nbsp;Outputs</a>
-                        <ul id="menu-mensagens-sub"  >
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputcosts">OUTPUT_COSTS</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputfstock">OUTPUT_FSTOCK</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputhstock">OUTPUT_HSTOCK</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputmoves">OUTPUT_MOVES</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputnmit">OUTPUT_NMIT</a></li>
-                            <li  id="menu-mensagens-enviadas" style="width:180px" ><a href="outputreults">OUTPUT_RESULTS</a></li>
+                        <ul id="menu-mensagens-sub">
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="outputcosts">OUTPUT_COSTS</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a
+                                    href="outputfstock">OUTPUT_FSTOCK</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a
+                                    href="outputhstock">OUTPUT_HSTOCK</a></li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="outputmoves">OUTPUT_MOVES</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a href="outputnmit">OUTPUT_NMIT</a>
+                            </li>
+                            <li id="menu-mensagens-enviadas" style="width:180px"><a
+                                    href="outputreults">OUTPUT_RESULTS</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
 
-            <li><a href="graph"><i class="lnr lnr-chart-bars"></i> <span>Graph</span><span class="fa fa-angle-right" style="float: right"></span></a>
+            <li><a href="graph"><i class="lnr lnr-chart-bars"></i> <span>Graph</span><span class="fa fa-angle-right"
+                                                                                           style="float: right"></span></a>
                 <ul>
                     <li><a href="dashboard.jsp"><i class="fa fa-inbox"></i> Inbox</a></li>
                     <li><a href="compose.html"><i class="fa fa-pencil-square-o"></i> Compose Mail</a></li>
@@ -209,7 +229,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </li>
             <li><a href="dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
 
-            <li id="menu-academico" ><a href="reports"><i class="fa fa-file-text-o"></i> <span>Reports</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+            <li id="menu-academico"><a href="reports"><i class="fa fa-file-text-o"></i> <span>Reports</span> <span
+                    class="fa fa-angle-right" style="float: right"></span></a>
             </li>
     </div>
 </div>
@@ -218,17 +239,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>
     var toggle = true;
 
-    $(".sidebar-icon").click(function() {
-        if (toggle)
-        {
+    $(".sidebar-icon").click(function () {
+        if (toggle) {
             $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-            $("#menu span").css({"position":"absolute"});
+            $("#menu span").css({"position": "absolute"});
         }
-        else
-        {
+        else {
             $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-            setTimeout(function() {
-                $("#menu span").css({"position":"relative"});
+            setTimeout(function () {
+                $("#menu span").css({"position": "relative"});
             }, 400);
         }
 

@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+        <a class="navbar-brand" href="index.html">Inventory Planning</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -36,35 +36,41 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
+                    <a href="#"><i class="fa fa-database" aria-hidden="true"></i> Data<span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Inputs <span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
+                                <li><a href="${pageContext.request.contextPath}/costsandtime">COSTSANDTIME</a></li>
+                                <li><a href="${pageContext.request.contextPath}/demands">DEMANDS</a></li>
+                                <li><a href="${pageContext.request.contextPath}/faultystock">FAULTYSTOCK</a></li>
+                                <li><a href="${pageContext.request.contextPath}/healthystock">HEALTHYSTOCK</a></li>
+                                <li><a href="${pageContext.request.contextPath}/items">ITEMS</a></li>
+                                <li><a href="${pageContext.request.contextPath}/locations">LOCATIONS</a></li>
+                                <li><a href="${pageContext.request.contextPath}/nmit">NMIT</a></li>
+                                <li><a href="${pageContext.request.contextPath}/planner_settings">PLANNER_SETTINGS</a></li>
+                                <li><a href="${pageContext.request.contextPath}/toursfrance">TOURSFRANCE</a></li>
+                                <li><a href="${pageContext.request.contextPath}/wasmoving">WASMOVING</a></li>
                             </ul>
-                            <!-- /.nav-third-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Outputs <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li><a href="${pageContext.request.contextPath}/outputcosts">OUTPUT_COSTS</a></li>
+                                <li><a href="${pageContext.request.contextPath}/outputfstock">OUTPUT_FSTOCK</a></li>
+                                <li><a href="${pageContext.request.contextPath}/outputhstock">OUTPUT_HSTOCK</a></li>
+                                <li><a href="${pageContext.request.contextPath}/outputmoves">OUTPUT_MOVES</a></li>
+                                <li><a href="${pageContext.request.contextPath}/outputnmit">OUTPUT_NMIT</a></li>
+                                <li><a href="${pageContext.request.contextPath}/outputreults">OUTPUT_RESULTS</a></li>
+                            </ul>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="${pageContext.request.contextPath}/graph"><i class="fa fa-database" aria-hidden="true"></i> Planning Graph<span
+                            class="fa arrow"></span></a>
                 </li>
             </ul>
         </div>

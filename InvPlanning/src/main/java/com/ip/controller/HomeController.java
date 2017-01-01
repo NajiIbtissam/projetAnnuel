@@ -29,7 +29,7 @@ public class HomeController {
         List costsandtime = cd.getAllCostsAndTime();
         ModelAndView mav = new ModelAndView();
         mav.addObject("costsandtime", costsandtime);
-        mav.setViewName("home");
+        mav.setViewName("costsandtime");
         return mav;
     }
 

@@ -14,12 +14,12 @@ $(document).ready(function () {
                             .search(val ? '^' + val + '$' : '', true, false)
                             .draw();
                     });
-
                 column.data().unique().sort().each(function (d, j) {
                     select.append('<option value="' + d + '">' + d + '</option>')
                 });
             });
-        }, dom: 'Bfrtip',
+        },
+        dom: 'Bfrtip',
         buttons: [
             'copyHtml5',
             'excelHtml5',
@@ -28,7 +28,8 @@ $(document).ready(function () {
                 orientation: 'landscape',
                 pageSize: 'LEGAL'
             }
-        ]
+        ],
+        "pagingType": "full_numbers"
     });
     $('#datatable tbody').on('click', 'tr', function () {
         $('#example tbody').on('click', 'tr', function () {

@@ -4,7 +4,7 @@
 
 <html>
 <head>
-    <title>Inventory Planning Home Page</title>
+    <title>Demands</title>
 
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
     <%--<link href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css" rel="stylesheet">--%>
@@ -19,7 +19,8 @@
 
     <link href="${pageContext.request.contextPath}/resources/DataTables/Buttons-1.2.4/css/buttons.dataTables.min.css"
           rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/DataTables/Buttons-1.2.4/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/DataTables/Buttons-1.2.4/css/buttons.bootstrap.min.css"
+          rel="stylesheet">
 
 </head>
 <body>
@@ -32,7 +33,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
+                <h1 class="page-header">Demands</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -43,48 +44,36 @@
                     <table class="table table-bordered table-hover table-striped" id="datatable">
                         <thead>
                         <tr>
+
                             <th>ID</th>
                             <th>LOCATIONCODE</th>
                             <th>ITEMCODE</th>
-                            <th>REPAIRCOST</th>
-                            <th>REPAIRTIME</th>
-                            <th>HSTORAGECOST</th>
-                            <th>FSTORAGECOST</th>
-                            <th>MEAN</th>
-                            <th>STANDARDDEV</th>
-                            <th>FACTOR</th>
+                            <th>DAY</th>
+                            <th>QUANTITY</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
+
                             <th>ID</th>
                             <th>LOCATIONCODE</th>
                             <th>ITEMCODE</th>
-                            <th>REPAIRCOST</th>
-                            <th>REPAIRTIME</th>
-                            <th>HSTORAGECOST</th>
-                            <th>FSTORAGECOST</th>
-                            <th>MEAN</th>
-                            <th>STANDARDDEV</th>
-                            <th>FACTOR</th>
+                            <th>DAY</th>
+                            <th>QUANTITY</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        <c:forEach var="costsandtime" items="${costsandtime}">
+                        <c:forEach var="demand" items="${demands}">
                             <tr>
-                                <th scope="row">${costsandtime.ID}</th>
-                                <td>${costsandtime.LOCATIONCODE}</td>
-                                <td>${costsandtime.ITEMCODE}</td>
-                                <td>${costsandtime.REPAIRCOST}</td>
-                                <td>${costsandtime.REPAIRTIME}</td>
-                                <td>${costsandtime.HSTORAGECOST}</td>
-                                <td>${costsandtime.FSTORAGECOST}</td>
-                                <td>${costsandtime.MEAN}</td>
-                                <td>${costsandtime.STANDARDDEV}</td>
-                                <td>${costsandtime.FACTOR}</td>
+                                <th scope="row">${demand.ID}</th>
+                                <td>${demand.LOCATIONCODE}</td>
+                                <td>${demand.ITEMCODE}</td>
+                                <td>${demand.DAY}</td>
+                                <td>${demand.QUANTITY}</td>
                             </tr>
 
                         </c:forEach>
+
                         </tbody>
                     </table>
                 </div>
