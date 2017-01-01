@@ -1,0 +1,77 @@
+package com.ip.model;
+
+import javax.persistence.Entity;
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+/**
+ * Created by titam on 30/10/16.
+ */
+
+@Entity
+public class Demands implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @Column(unique = true)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long ID;
+    @Basic
+    private String LOCATIONCODE;
+    @Basic
+    private String ITEMCODE;
+    @Basic
+    private Long DAY;
+    @Basic
+    private Long QUANTITY;
+
+    public Demands() {
+    }
+
+
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    public String getLOCATIONCODE() {
+        return LOCATIONCODE;
+    }
+
+    public void setLOCATIONCODE(String LOCATIONCODE) {
+        this.LOCATIONCODE = LOCATIONCODE;
+    }
+
+    public String getITEMCODE() {
+        return ITEMCODE;
+    }
+
+    public void setITEMCODE(String ITEMCODE) {
+        this.ITEMCODE = ITEMCODE;
+    }
+
+    public Long getDAY() {
+        return DAY;
+    }
+
+    public void setDAY(Long DAY) {
+        this.DAY = DAY;
+    }
+
+    public Long getQUANTITY() {
+        return QUANTITY;
+    }
+
+    public void setQUANTITY(Long QUANTITY) {
+        this.QUANTITY = QUANTITY;
+    }
+
+}

@@ -1,0 +1,92 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+<html>
+<head>
+    <title>Inventory Planning Home Page</title>
+
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/admin.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/DataTables/datatables.css" type='text/css'/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/DataTables/DataTables-1.10.13/css/dataTables.bootstrap.css" type='text/css'/>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <jsp:include page="header.jsp"></jsp:include>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Dashboard</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12 col-md-6">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped" id="datatable">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>LOCATIONCODE</th>
+                            <th>ITEMCODE</th>
+                            <th>REPAIRCOST</th>
+                            <th>REPAIRTIME</th>
+                            <th>HSTORAGECOST</th>
+                            <th>FSTORAGECOST</th>
+                            <th>MEAN</th>
+                            <th>STANDARDDEV</th>
+                            <th>FACTOR</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="costsandtime" items="${costsandtime}">
+                            <tr>
+                                <th scope="row">${costsandtime.ID}</th>
+                                <td>${costsandtime.LOCATIONCODE}</td>
+                                <td>${costsandtime.ITEMCODE}</td>
+                                <td>${costsandtime.REPAIRCOST}</td>
+                                <td>${costsandtime.REPAIRTIME}</td>
+                                <td>${costsandtime.HSTORAGECOST}</td>
+                                <td>${costsandtime.FSTORAGECOST}</td>
+                                <td>${costsandtime.MEAN}</td>
+                                <td>${costsandtime.STANDARDDEV}</td>
+                                <td>${costsandtime.FACTOR}</td>
+                            </tr>
+
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- /.panel-footer -->
+            </div>
+            <!-- /.panel .chat-panel -->
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
+
+<!-- /#wrapper -->
+
+
+<script src="${pageContext.request.contextPath}/resources/js/jquery-2.2.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/admin.js"></script>
+<script src="${pageContext.request.contextPath}/resources/DataTables/DataTables-1.10.13/js/jquery.dataTables.js"></script>
+<script src="${pageContext.request.contextPath}/resources/DataTables/DataTables-1.10.13/js/dataTables.bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/script.js"></script>
+</body>
+</html>
